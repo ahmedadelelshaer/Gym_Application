@@ -1,0 +1,1044 @@
+body {
+  overflow-x: hidden;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full height of the viewport */
+  position: relative; /* Ensures the ::before pseudo-element is positioned relative to this */
+  background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("./assets/mainImage.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.Navbar {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 80px;
+  margin-left: 10px;
+  margin-right: 80px;
+  align-items: center;
+  z-index: 1; /* Ensure Navbar is above the overlay */
+}
+
+.logo {
+  width: 100px;
+  height: 50px;
+}
+
+.nav-home {
+  color: rgb(236, 223, 223);
+  font-size: 17px;
+  font-weight: 150;
+  padding: 10px;
+  list-style-type: none;
+}
+.nav-home-link{
+  color: rgb(236, 223, 223);
+  font-size: 17px;
+  font-weight: 150;
+  padding: 10px;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.nav-home:hover {
+  cursor: pointer;
+}
+
+.nav-icon {
+  border: none;
+  color: rgb(236, 223, 223);
+  background: none;
+  padding: 15px;
+}
+
+.nav-home-menu {
+  display: flex;
+  gap: 15px;
+  word-spacing: 5px;
+}
+
+.nav-icon-menu {
+  display: flex;
+}
+
+.nav-icon:hover {
+  transition: 0.3s;
+  transform: scale(1.3);
+  cursor: pointer;
+}
+
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative; /* Ensure Hero content is positioned above the overlay */
+  z-index: 1; /* Ensure Hero content is above the overlay */
+}
+
+.Hero-MainText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "New Amsterdam", sans-serif;
+}
+
+.Hero-text1 {
+  color: wheat;
+  font-size: 100px;
+  margin: 0;
+}
+
+.Hero-text2 {
+  color: wheat;
+  font-size: 150px;
+  margin: 0;
+}
+
+.Hero-subtext {
+  color: wheat;
+  font-weight: small;
+  font-size: 20px;
+  max-width: 500px;
+}
+
+.Hero-buttons {
+  display: flex;
+  gap: 50px;
+}
+
+.start {
+  font-family: "New Amsterdam", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 25px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: rgb(247, 247, 75);
+  border: none;
+  text-decoration: none;
+  color:black
+}
+
+.start:hover {
+  cursor: pointer;
+  color: rgb(247, 247, 75);
+  background-color: black;
+  transition: 0.3s;
+  transform: scale(1.3);
+}
+.learnMore {
+  font-family: "New Amsterdam", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 25px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: rgb(247, 247, 75);
+  border: none;
+}
+
+.learnMore:hover {
+  cursor: pointer;
+  color: rgb(247, 247, 75);
+  background-color: black;
+  transition: 0.3s;
+  transform: scale(1.3);
+}
+
+
+.no-bg {
+  background-image: none;
+}
+.S{
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color:white;
+  min-height: 100vh
+}
+.s-text{
+  margin-left: 210px;
+  margin-top: 70px;
+  margin-bottom: 0;
+  color: white;
+  font-family: "New Amsterdam", sans-serif;
+  font-size: 90px;
+  word-spacing: 20px;
+}
+.carousel-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.arrow {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 5px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.left-arrow {
+  margin-left: 70px;
+  left: 0;
+  transform: translateY(-50%);
+  border: 1px solid white;
+  border-radius: 40px;
+  padding: 15px;
+}
+
+.right-arrow {
+  margin-right: 100px;
+  right: 0;
+  transform: translateY(-50%);
+   border: 1px solid white;
+   border-radius: 40px;
+   padding: 15px;
+}
+.arrow i {
+  color: white;
+  font-size: 20px; /* Adjust the size to match the image */
+}
+
+.arrow:hover i {
+  color: yellow; /* Or any color you'd like on hover */
+}
+
+.squares-container {
+  display: flex;
+  justify-content: center;
+  overflow: hidden; /* Ensures only a set number of squares are visible at a time */
+  width: 100%;
+  padding: 20px 40px; /* Space between arrows and squares */
+}
+.square{
+  
+  border: 1px solid rgba(154, 152, 152, 0.205);
+  background-color: rgba(154, 152, 152, 0.205);
+  padding: 50px;
+  margin-left: 50px;
+  border-radius: 15px;
+  height: 250px;
+  width:  250px;
+}
+.square-text{
+  font-size: 25px;
+  font-family: "New Amsterdam", sans-serif;
+}
+.square-learn{
+  font-size: 25px;
+  font-family: "New Amsterdam", sans-serif;
+  margin-top: 40px;
+}
+.square-desc{
+  font-family: "New Amsterdam", sans-serif;
+  font-size: 15px;
+  font-family: small;
+}
+.dumbell{
+  width: 50px;
+  height:40px
+}
+.square:hover{
+  background-color: rgb(247, 247, 75);
+  color: black;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.About{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.about-text{
+  font-family: "New Amsterdam", sans-serif;
+  color: white;
+  font-family: "New Amsterdam", sans-serif;
+  font-size: 90px;
+  word-spacing: 20px;
+  align-self: flex-start;
+  margin-left: 200px;
+  margin-bottom: 10px;
+
+}
+.about-image{
+  width:1130px;
+  height: 500px;
+  border-radius: 10px;
+  margin-top: 0px;
+}
+
+.About-desc{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+
+}
+.about-subtext{
+  font-size: 12px;
+  max-width: 700px;
+  font-weight: 200;
+  margin-right: 100px;
+  margin-left: 0px;
+}
+.years{
+  
+    font-family: "New Amsterdam", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 25px;
+    padding: 10px 50px;
+    background-color: rgb(247, 247, 75);
+    border: none;
+}
+.About-buttons{
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-start;
+}
+.butt1{
+  border: solid  rgb(247, 247, 75);
+  border-radius:100%;
+  max-width: 200px;
+  max-height: 200px;
+  margin-left: 200px;
+}
+.butt2{
+    border: solid  rgb(247, 247, 75);
+    border-radius:100%;
+    max-width: 200px;
+    max-height: 200px;
+    margin-left: 40px;
+  
+}
+.button-text{
+  margin-left: 40px;
+}
+.butt-main-text{
+  display: flex;
+  max-width: 400px;
+  
+}
+.butt-text-blonde{
+  color: rgb(247, 247, 75);/* Yellow color for the first two words */
+  font-weight: bold;
+}
+.butt-text-noblonde{
+  color: #fff; /* White color for the rest of the text */
+  margin-left: 5px;
+}
+.butt-text-sub {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ccc; /* Light grey color for subtext */
+  width: 360px;
+  margin-top: 0px;
+}
+.BMI{
+  background-color:  black;
+  height: 100%;
+  
+}
+.calc{
+  display: flex;
+  flex-direction: column; 
+  align-items: center;  
+  justify-content: center;  
+  height: 100vh;
+  max-height: 100%;
+}
+.styled-text {
+  
+  font-family: "New Amsterdam", sans-serif;
+  font-size: 100px; /* Adjust size as needed */
+  color: #333; /* Default color */
+  margin-left: 0px;
+}
+
+.regular-text {
+  color: wheat /* Default color */
+}
+.regular-text-second {
+  color: wheat;
+  font-size: 50px; /* Default color */
+}
+
+.bold-text {
+  font-weight: bold;
+  color: rgb(247, 247, 75);
+}
+
+.underline-text {
+  font-weight: bold;
+  font-size: 60px; 
+  color: rgb(247, 247, 75);
+   /* Thickness of the underline */
+}
+.middle{
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;
+}
+.donuts{
+  width:300px;
+  height:300px;
+  margin-left: 120px;
+}
+.ibm-button {
+  display: flex;
+  align-items: center;
+  padding: 15px 25px; /* Adjust padding to match the screenshot */
+  background: linear-gradient(90deg, #FFDD00, #FBB034); /* The button background color */
+  border: none;
+  border-radius: 25px; /* Rounded corners */
+  font-family: "Poppins", sans-serif; /* Ensure font-family matches */
+  font-size: 18px; /* Adjust font size */
+  font-weight: bold; /* Make the text bold */
+  color: black; /* Text color */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.ibm-button:hover {
+  background: black; /* Change background color on hover */
+  color: yellow; /* Change text color on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.ibm-butt-text {
+  margin-right: 10px; /* Space between the text and the arrow icon */
+}
+
+.ibm-butt-text-bold {
+  font-weight: bold; /* Make this text bold */
+}
+
+.ibm-button::after {
+  content: '>'; /* Arrow symbol */
+  margin-left: 10px;
+  font-size: 18px; /* Adjust arrow size */
+  color: black; /* Arrow color */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.ibm-button:hover::after {
+  color: yellow; /* Change arrow color on hover */
+}
+.card-container{
+  display: flex;
+  justify-content: space-around;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 25px;
+}
+.Blue-area{
+  display: flex;
+
+  align-items: center;
+  width: 390px;
+  height: 250px;
+  background-color: rgb(247, 247, 75); 
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  text-align: center;
+}
+
+.bmi-value {
+  background-color: rgb(247, 247, 75); 
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 20px; 
+  color: black;/* Adds space between the input and the blue section */
+   /* Ensures padding doesn't affect overall width */
+}
+.bmi-value:focus{
+  border: none;
+  outline: none;
+
+}
+
+.card-content {
+  position: relative;
+  background-color: #EFF6FF; /* Blue background */
+  padding: 20px;
+  border-radius: 0px 0px 25px 25px; /* Round the bottom corners */
+  margin-top: -20px;
+   /* Pulls the blue section up over the white */
+}
+.card-button {
+  
+  padding: 15px 25px; /* Adjust padding to match the screenshot */
+  background-color: #d7e6f9; 
+  border: none;
+  border-radius: 25px; /* Rounded corners */
+  font-family: "Poppins", sans-serif; /* Ensure font-family matches */
+  font-size: 18px; /* Adjust font size */
+  font-weight: bold; /* Make the text bold */
+  color: black; /* Text color */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+.results{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.submit-button {
+  margin-bottom: 50px;
+  font-family: "New Amsterdam", sans-serif;
+  padding: 15px 25px; /* Adjust padding to match the screenshot */
+  background-color: rgb(247, 247, 75);  /* The button background color */
+  border: none;
+  border-radius: 25px; /* Rounded corners */
+   /* Ensure font-family matches */
+  font-size: 30px; /* Adjust font size */
+  font-weight: bold; /* Make the text bold */
+  color: black; /* Text color */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.submit-button:hover {
+  background: black; /* Change background color on hover */
+  color: yellow; /* Change text color on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+.pre-advice{
+  color:wheat;
+  font-size: 25px;
+  font-weight: bold;
+
+}
+.advice{
+  color:wheat;
+  font-size: 20px;
+  
+}
+.Shop{
+  background-color:  rgb(255, 255, 255);
+  height: 100vh;
+  
+}
+.Shop-main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.shop-main-container-row{
+  margin: 50px;
+  display: flex;
+  justify-content: space-around;
+  background-color: whitesmoke;
+  border-radius: 25px;
+  width: 1250px;
+}
+.shop-main-container-column{
+  display: flex;
+  flex-direction: column;
+}
+.shop-main-container-image{
+  width:250px;
+  height:250px;
+}
+.shop-main-container-text{
+  width:550px;
+  font-family: "New Amsterdam", sans-serif;
+  font-size: 45px;
+}
+.Shop-button{
+  width: 300px;
+  font-family: "New Amsterdam", sans-serif;
+  padding: 15px 25px; /* Adjust padding to match the screenshot */
+  background-color: #b3c7e0;  /* The button background color */
+  border: none;
+  border-radius: 25px; /* Rounded corners */
+   /* Ensure font-family matches */
+  font-size: 30px; /* Adjust font size */
+  font-weight: bold; /* Make the text bold */
+  color: black; /* Text color */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+.Shop-button:hover {
+  background: black; /* Change background color on hover */
+  color: yellow; /* Change text color on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+.product {
+  margin-top: 30px;
+  display: flex;
+  background-color: whitesmoke;
+  width: 100%;
+  align-items: center; /* Center items vertically */
+  padding: 20px; /* Add padding for better spacing */
+}
+
+.product-image {
+  margin-left: 100px; /* Adjust spacing between image and text */
+  border-radius: 10px;
+  width: 230px;
+  height: 250px;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between text and button */
+  flex-grow: 1; /* Allow text container to grow and fill available space */
+  margin-left: 20px; /* Space between image and text */
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allow info to take available space */
+}
+
+.country-container {
+  display: flex;
+  align-items: center; /* Align items vertically center */
+  margin-bottom: 0; /* Adjust spacing between image and text */
+}
+
+.location-icon {
+  font-size: 15px; /* Adjust size of the icon */
+  color: rgba(255, 0, 0, 0.742); /* Adjust color as needed */
+  margin-right: 5px;
+  margin-top: 10px;
+  margin-left: 20px;  /* Adjust spacing between icon and text */
+}
+
+.category {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 7px;
+  margin-bottom: 5px;
+}
+
+.product-about {
+  font-weight: normal;
+  margin-top: 0px;
+}
+
+.product-title, .product-price, .stock, .product-reviews {
+  margin-left: 20px;
+}
+
+.product-title {
+  
+  font-family: "New Amsterdam", sans-serif;
+  margin-top: 0px;
+}
+
+.product-price {
+  margin-top: 5px;
+}
+
+.stock, .product-reviews {
+  margin-top: 5px;
+}
+
+.add-to-cart {
+  background-color: #b3c7e0;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-right: 250px;
+}
+
+.add-to-cart:hover {
+  background: black;
+  color: yellow;
+  transform: scale(1.05);
+}
+.cart-empty{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  text-align: center;
+  font-size: 25px;
+}
+.cart{
+  display: flex;
+
+}
+.cart-main-container{
+  width: 70%;
+  height: 100vh;
+}
+
+.cart-text{
+  font-weight: 200;
+  margin-left: 50px;
+}
+.cart-products{
+  display: flex;
+  flex-direction: column;
+}
+.cart-product-image{
+  width:100px;
+  height: 100px;
+  margin :20px;
+}
+.cart-product{
+  display: flex;
+  border-bottom: 1px solid whitesmoke;
+  
+}
+.cart-product-details-title{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.cart-product-title{
+  font-weight: 600;
+
+}
+.cart-product-other {
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  gap: 100px; /* Space between prices */
+  align-items: center; /* Center align items vertically */
+}
+
+
+.cart-product-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Ensure it takes full width of the container */
+}
+.delete-product{
+  color: red;
+  border: none;
+  background-color: white;
+  margin-right:100px ;
+  cursor: pointer;
+}
+
+.counter-product {
+  display: flex;
+  align-items: center;
+   /* Space between buttons and number */
+}
+
+.counter-button-add {
+  background-color: transparent;
+  border: none; /* Border color for the buttons */
+  padding: 10px;
+  font-size: 25px;
+  font-weight: 200;
+  cursor: pointer;
+  width: 10px;
+  text-align: center;
+  line-height: 1;
+  margin-left: 0px;
+}
+.counter-button-sub {
+  background-color: transparent;
+  border: none; /* Border color for the buttons */
+  padding: 10px;
+  font-size: 25px;
+  font-weight: 200;
+  cursor: pointer;
+  width: 10px;
+  text-align: center;
+  line-height: 1;
+  margin-right: 5px;
+}
+
+.counter-number {
+  border: 1px solid rgb(168, 192, 224); /* Black border for the number container */
+  border-radius: 20px; /* Optional: rounded corners */
+  padding: 5px 10px;
+  font-size: 10px;
+  text-align: center;
+  width: 15px; /* Adjust width as needed */
+}
+.cart-product-price{
+  font-weight: bold;
+}
+.cart-sub-container{
+  color: rgb(57, 59, 61);
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px ;
+  width: 30%;
+  background-color: whitesmoke;
+  border:1px solid  whitesmoke;;
+  height: 100vh;
+}
+.cart-sub-details{
+  margin-left: 50px;
+}
+.cart-subtext{
+  font-weight: normal;
+  margin-bottom: 50px;
+}
+.total-text{
+  margin-bottom: 0px;
+}
+.cart-price{
+  margin-top: 0px;
+  font-size:   30px;
+  font-weight: normal;
+}
+label[for="favColor"] {
+  font-size: 16px;
+  
+  color: #333;
+  margin-bottom: 8px;
+  display: block;
+  margin-left: 30px;
+  margin-bottom: 0px;
+  margin-top: 30px;
+}
+select#favColor {
+  margin-top: 0px;
+  margin-left: 20px;
+  font-weight: normal;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(236, 229, 229);
+  width: 100%;
+  max-width: 300px;
+  font-size: 25px;
+}
+
+/* Add a hover effect to the select element */
+select#favColor:hover {
+  border-color: #aaa;
+}
+
+/* Style options in the select */
+select#favColor option {
+  padding: 8px;
+  font-weight: normal;
+
+}
+
+.dropdown-1{
+  margin-left:-30px;
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  width: 400px;
+  background-color: rgb(236, 229, 229);
+  border-radius: 10px;
+}
+.dropdown-2{
+  margin-top: 50px;
+  margin-left:-30px;
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  width: 400px;
+  background-color: rgb(236, 229, 229);
+  border-radius: 10px;
+}
+label[for="PromoCode"] {
+  font-size: 16px;
+  
+  color: #333;
+  margin-bottom: 8px;
+  display: block;
+  margin-left: 30px;
+  margin-bottom: 0px;
+  margin-top: 30px;
+}
+.promoInput{
+  margin-top: 0px;
+  margin-left: 20px;
+  font-weight: normal;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(236, 229, 229);
+  width: 100%;
+  max-width: 300px;
+  font-size: 25px;
+}
+.hr{
+  margin-top: 25px;
+  margin-left: -50px;
+  
+}
+.checkout{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.total-cost{
+  margin-top: 20px;
+  font-size: 25px;
+  margin-bottom: 0px;
+}
+.total{
+  margin-top:0px ;
+}
+.checkout-button{
+  background-color: #b3c7e0;
+  border: none;
+  border-radius: 10px;
+  padding:  20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 400px;
+  margin-bottom: 50px;
+  margin-right: 20px;
+
+}
+.checkout-button:hover {
+  background: black;
+  color: yellow;
+  transform: scale(1.05);
+}
+.Exercises{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.explore{
+  text-align: center;
+  width: 500px;
+}
+.search{
+  display: flex;
+  gap:10px;
+}
+.search-input{
+  width: 1000px;
+  height: 40px;
+  border-radius: 10px;
+  padding: 10px;
+  border-color: #b3c7e0;
+}
+.search-input:focus{
+  border-color: #b3c7e0;
+  outline: none;
+}
+.search-button{
+  
+    background-color: red;
+    width: 150px;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: whitesmoke;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+  
+}
+.body-categories{
+  margin-top: 100px;
+  display: flex;
+  width: 100%;
+  gap:20px
+}
+
+.horizontal-scroll-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.horizontal-scrollbar {
+  margin-left: 300px;
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  flex: 1;
+  scroll-behavior: smooth;
+}
+
+.bodylist {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  cursor: pointer;
+  width: 250px;
+  height: 100px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.horizontal-scroll-container button {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+.horizontal-scroll-container button:hover {
+  transform: scale(1.1); /* Slightly increase the size on hover */
+} 
+
+.horizontal-scroll-container button:active {
+  transform: scale(0.95); /* Slightly decrease the size when clicked */
+}
+
+.horizontal-scroll-container button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+bodylist img {
+  width: 50px;
+  height: 50px;
+}
+.bodylist:focus{
+  background-color: yellow;
+
+}
